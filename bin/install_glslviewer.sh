@@ -1,6 +1,15 @@
-apt install git build-essential cmake xorg-dev libglu1-mesa-dev libncurses5-dev libncursesw5-dev
-apt-get install libgbm-dev
-apt-get install libegl1-mesa-dev
+#!/bin/bash
+# stop if fail
+set -e
+# print every command being run
+set -x
+
+apt update -y
+apt upgrade -y
+
+apt install -y git build-essential cmake xorg-dev libglu1-mesa-dev libncurses5-dev libncursesw5-dev
+apt install -y libgbm-dev
+apt install -y libegl1-mesa-dev
 
 git clone https://github.com/patriciogonzalezvivo/glslViewer.git
 cd glslViewer
