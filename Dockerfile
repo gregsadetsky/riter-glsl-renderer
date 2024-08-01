@@ -1,4 +1,4 @@
-FROM python:3.12.1
+FROM ubuntu:24.04
 
 WORKDIR /code
 
