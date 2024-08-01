@@ -2,6 +2,9 @@ FROM ubuntu:24.04
 
 WORKDIR /code
 
+RUN apt update -y
+RUN apt upgrade -y
+
 # ADD ./bin/install_glslviewer.sh /code/bin/install_glslviewer.sh
 # RUN chmod +x /code/bin/install_glslviewer.sh
 # RUN /code/bin/install_glslviewer.sh
