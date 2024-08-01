@@ -11,7 +11,7 @@ RUN apt-get install -y python3-dev
 
 # docker will not re-pip install if requirements.txt doesn't change
 ADD ./requirements.txt /code/requirements.txt
-RUN pip install -r requirements.txt
+RUN pip install --break-system-packages -r requirements.txt
 
 ADD . /code
 
