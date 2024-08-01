@@ -19,4 +19,4 @@ RUN pip install --break-system-packages -r requirements.txt
 
 ADD . /code
 
-CMD ["python", "server.py", "--fakearg"]
+CMD ["python3", "server.py", "--fakearg"]
