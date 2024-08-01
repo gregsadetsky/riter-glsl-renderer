@@ -5,10 +5,10 @@ WORKDIR /code
 RUN apt update -y
 RUN apt upgrade -y
 
-# ADD ./bin/install_glslviewer.sh /code/bin/install_glslviewer.sh
-# RUN chmod +x /code/bin/install_glslviewer.sh
-# RUN /code/bin/install_glslviewer.sh
-# 
+ADD ./bin/install_glslviewer.sh /code/bin/install_glslviewer.sh
+RUN chmod +x /code/bin/install_glslviewer.sh
+RUN /code/bin/install_glslviewer.sh
+
 RUN apt-get install -y python3-pip
 RUN apt-get install -y python3-dev
 RUN apt-get install -y python3
@@ -19,4 +19,4 @@ RUN pip install --break-system-packages -r requirements.txt
 
 ADD . /code
 
-CMD ["python3", "server.py", "--fakearg"]
+CMD ["python3", "server.py"]
